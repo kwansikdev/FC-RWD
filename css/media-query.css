@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/* 모든 디바이스 */
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+/* All 컨테이너 */
+.container {
+  background: silver;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* All 헤더 */
+.header {
+  background: yellow;
+  height: 10vh;
+}
+
+/* All 내비게이션 */
+.navigation {
+  background: pink;
+  height: 10vh;
+}
+
+/* All 메인콘텐츠 */
+.main-content {
+  background: skyblue;
+  height: 50vh;
+}
+
+/* All 광고 */
+.ad {
+  background: orange;
+  height: 20vh;
+}
+
+/* All 푸터 */
+.footer {
+  background: lime;
+  height: 10vh;
+}
+
+
+/* 모바일 스타일 */
+@media screen and (max-width: 799px){
+  /* Mobile 헤더 */
+  .header {
+    flex: 1 1 100%;
+    order: -1;
+  }
+
+  /* Mobile 내비게이션 */
+  .navigation {
+    flex: 1 1 100%;
+    order: -1;
+  }
+
+  /* Mobile 메인콘텐츠 */
+  .main-content {
+    flex: 1 1 100%;
+    height: 50vh;
+  }
+
+  /* Mobile 광고 */
+  .ad {
+    flex: 1 1 100%;
+    order: -1;
+  }
+
+  /* Mobile 푸터 */
+  .footer {
+    flex: 1 1 100%;
+    height: 10vh;
+  }
+}
+
+/* 태블릿 스타일 */
+@media screen and (min-width: 50em) {
+
+  /* 컨테이너 */
+  .container {}
+
+  /* 메인 콘텐츠 */
+  .main-content {}
+
+  /* 광고 */
+  .ad {}
+}
+
+/* 랩탑 스타일 */
+@media screen and (min-width: 64em) {
+  .container {}
+
+  /* 메인 콘텐츠 */
+  .main-content {}
+
+  /* 광고 */
+  .ad {}
+}
+
+/* 와이드 스크린 스타일 */
+@media screen and (min-width: 100em) {
+
+  /* 랩탑 스타일 */
+  .container {}
+
+  /* 메인 콘텐츠 */
+  .main-content {}
+
+  /* 광고 */
+  .ad {}
+}
