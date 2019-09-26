@@ -114,13 +114,19 @@ a {
   .col-m4 {
     width: 100%;
   }
-
+  /* mobile layout */
+  .header {
+    padding-bottom: 1em;
+  }
+  
   /* mobile header */
   .header {
     background: #32302e;
   }
   .logo, .member, .search {
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   /* mobile member */
   .member {
@@ -130,17 +136,96 @@ a {
     background: #988574;
     color: #fff;
     margin: 0;
-    padding: 0.5em 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    /* width: calc(100% + 40px);
+    position: relative;
+    left: -20px; */
   }
   .member a {
     padding: 0.35em 0;
     /* background: blue; */
     display: block;
-    padding: 0 0.5em;
+    padding-left: 0.5em;
   }
   /* mobile logo */
   .logo {
 
+  }
+  /* mobile search */
+  .search {
+    background: yellow;
+    text-align: right;
+  }
+  [type="search"] {
+    border: 1px solid #aaa;
+    border-radius: 0.35em;
+    height: 2em;
+    width: calc(100% - 3em);
+    margin-right: 0.5em;
+  }
+  .btn-search {
+    border: 0 none;
+    padding: 0;
+    width: 2em;
+    height: 2em;
+    position: relative;
+    background: transparent;
+  }
+  .btn-search::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(./images/btn_search.png) no-repeat;
+    background-size: cover;
+  }
+  
+  /* mobile menu */
+  .btn-menubar {
+    width: 2.5em;
+    height: 2.5em;
+    border: 0 none;
+    padding: 0;
+    position: absolute;
+    top: 5em;
+    right: 20px;
+    background: blue;
+    overflow: hidden;
+  }
+  
+  .menubar {
+    background: #fff;
+    width: 100%;
+    height: 25%;
+    border-radius: 1em;
+    position: absolute;
+    left: 0;
+    transition: all 200ms;
+  }
+  .menubar-top {
+    top: 0;
+  }
+  .menubar-middle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menubar-bottom {
+    top: 100%;
+    transform: translateY(-100%);
+  }
+  .nav-act .menubar-top {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .nav-act .menubar-middle {
+    transform: translate(-100%, 50%);
+  }
+  .nav-act .menubar-bottom {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
   }
 }
 
