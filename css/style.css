@@ -10,6 +10,10 @@
 }
 
 /* Reset CSS */
+ul, ol, li {
+  list-style: none;
+  padding-left: 0;
+}
 fieldset {
   margin: 0;
   padding: 0;
@@ -31,27 +35,42 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 /* grid module */
-.flex-row{
+.flex-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.flex-col{
+.flex-col {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
+
+/* mobile grid */
+/* .col-m1 {
+  width: 20%;
+}
+.col-m2 {
+  width: 45%;
+}
+.col-m3 {
+  width: 70%;
+}
+.col-m4 {
+  width: 100%;
+} */
 
 /* All Style */
 .container {
   background: silver;
 }
-
 .header {
   background: yellow;
 }
-
 .navigation {
   background: pink;
 }
@@ -59,27 +78,98 @@ a {
 .main {
   background: skyblue;
 }
-
 .book {
   background: lime;
 }
-
 .news {
   background: goldenrod;
 }
-
 .board {
   background: teal;
 }
-
 .favorite {
   background: hotpink;
 }
-
 .twitter {
   background: aqua;
 }
 
 .footer {
   background: purple;
+}
+
+/* Mobile Device */
+@media screen and (max-width: 62.5em) {
+
+  /* mobile grid */
+  .col-m1 {
+    width: 20%;
+  }
+  .col-m2 {
+    width: 45%;
+  }
+  .col-m3 {
+    width: 70%;
+  }
+  .col-m4 {
+    width: 100%;
+  }
+
+  /* mobile header */
+  .header {
+    background: #32302e;
+  }
+  .logo, .member, .search {
+    width: 100%;
+  }
+  /* mobile member */
+  .member {
+    order: -1;
+    display: flex;
+    justify-content: flex-end;
+    background: #988574;
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 0;
+  }
+  .member a {
+    padding: 0.35em 0;
+    /* background: blue; */
+    display: block;
+    padding: 0 0.5em;
+  }
+  /* mobile logo */
+  .logo {
+
+  }
+}
+
+/* Desktop Device */
+@media screen and (min-width: 62.5em){
+  /* Desktop grid */
+  .col-d3 {
+    width: calc(65px * 3 + 20px * 2);
+  }
+  .col-d4 {
+    width: calc(65px * 4 + 20px * 3);
+  }
+  .col-d5 {
+    width: calc(65px * 5 + 20px * 4);
+  }
+  .col-d8 {
+    width: calc(65px * 8 + 20px * 7);
+  }
+  
+  .container {
+    align-items: center;
+  }
+  .header, .main {
+    width: 1000px;
+  }
+  .navigation, .footer {
+    width: 100%;
+  }
+  .main {
+    justify-content: space-between;
+  }
 }

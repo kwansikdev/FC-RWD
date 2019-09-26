@@ -9,14 +9,39 @@
 </head>
 <body>
   <div class="container flex-col">
-    <header class="header">header</header>
+    <header class="header flex-row">
+      <h1 class="logo">
+        <a href="#"><img src="images/rwd-logo.png" alt="Web Cafe"/></a>
+      </h1>
+      <ul class="member">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">커뮤니티</a></li>
+      </ul>
+      <form
+        action="javascript:alert('검색이 완료되었습니다.');"
+        class="search"
+      >
+        <fieldset>
+          <legend>검색 폼</legend>
+          <!-- <label for="search" class="a11y-hidden">검색어</label> -->
+          <input
+            aria-label="검색어"
+            type="search"
+            id="search"
+            required
+            placeholder="검색어를 입력하세요"
+          />
+          <button type="submit" class="btn-search">검색</button>
+        </fieldset>
+    </header>
     <nav class="navigation">navigation</nav>
-    <main class="main">
-      <section class="book">추천서적</section>
-      <section class="news">새소식</section>
-      <section class="board">게시판</section>
-      <section class="favorite">인기사이트</section>
-      <article class="twitter">트위터</article>
+    <main class="main flex-row">
+      <section class="book col-m4 col-d4">추천서적</section>
+      <section class="news col-m4 col-d8">새소식</section>
+      <section class="board col-m4 col-d4">게시판</section>
+      <section class="favorite col-m4 col-d3">인기사이트</section>
+      <article class="twitter col-m4 col-d5">트위터</article>
     </main>
     <footer class="footer">footer</footer>
   </div>
